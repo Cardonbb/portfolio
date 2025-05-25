@@ -31,11 +31,16 @@
       text-decoration: underline;
     }
     .project {
-      margin-bottom: 1.5em;
+      margin-bottom: 2em;
     }
-    .project strong {
-      display: block;
-      margin-bottom: 0.3em;
+    .project-header {
+        margin-bottom: 0.5em;
+    }
+    .project-header strong {
+        font-size: 1.1em;
+    }
+    .project p {
+        margin-bottom: 1em;
     }
     .demo {
       margin: 1em 0;
@@ -46,12 +51,14 @@
     .demo img {
       max-width: 100%;
       border-radius: 4px;
-      margin: 0.5em 0;
+      display: block; /* Make image a block element */
+      margin: 0.5em auto; /* Center image if smaller than container */
     }
     .demo video {
       max-width: 100%;
       border-radius: 4px;
-      margin: 0.5em 0;
+      display: block; /* Make video a block element */
+      margin: 0.5em auto; /* Center video if smaller than container */
     }
     .links {
       margin-top: 0.5em;
@@ -64,22 +71,21 @@
 
 <h2>🛠 Projects</h2>
 <div class="project">
-  <strong>WordHunt Bot</strong>
-  OCR + C++ solver for real-time game automation.
+  <div class="project-header">
+    <strong>WordHunt Bot</strong> - <a href="https://github.com/Cardonbb/wordHunt">[GitHub]</a>
+  </div>
+  <p>OCR + C++ solver for real-time game automation.</p>
   <div class="demo">
     <img src="demos/wordHunt.gif" alt="WordHunt Bot demo">
-  </div>
-  <div class="links">
-    <a href="https://github.com/Cardonbb/wordHunt">[GitHub]</a>
   </div>
 </div>
 
 <div class="project">
-  <strong>League Betting Platform</strong>
-  Predicts KDA & winrates, generates betting lines, FastAPI + XGBoost.
-  <div class="links">
-    <a href="#">[GitHub]</a>
-  </div>
+    <div class="project-header">
+        <strong>League Betting Platform</strong> - <a href="#">[GitHub]</a>
+    </div>
+  <p>Predicts KDA & winrates, generates betting lines, FastAPI + XGBoost.</p>
+  <!-- Add demo for League Betting Platform here if you have one -->
 </div>
 
 <h2> Contact</h2>
