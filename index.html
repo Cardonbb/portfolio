@@ -47,21 +47,38 @@
       padding: 1em;
       background: #f5f5f5;
       border-radius: 8px;
+      text-align: center;
     }
-    .demo img {
-      max-width: 100%;
+    .demo img.demo-gif {
+      width: 400px;
       border-radius: 4px;
-      display: block; /* Make image a block element */
-      margin: 0.5em auto; /* Center image if smaller than container */
+      margin: 1em 0;
     }
-    .demo video {
-      max-width: 100%;
+    .results-images {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 1em;
+    }
+    .results-images img {
+      width: 180px;
       border-radius: 4px;
-      display: block; /* Make video a block element */
-      margin: 0.5em auto; /* Center video if smaller than container */
     }
-    .links {
+    .caption {
       margin-top: 0.5em;
+      font-style: italic;
+    }
+    @media (max-width: 600px) {
+      .results-images {
+        flex-direction: column;
+        align-items: center;
+      }
+      .results-images img {
+        width: 80%;
+      }
+      .demo img.demo-gif {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -71,21 +88,28 @@
 
 <div class="project">
   <div class="project-header">
-    <strong>WordHunt Bot</strong> - <a href="https://github.com/Cardonbb/wordHunt">[GitHub]</a>
+    <strong>Word Hunt Bot</strong> - <a href="https://github.com/Cardonbb/wordHunt">[GitHub]</a>
   </div>
   <p>A full pipeline bot that uses computer vision, deep learning, and algorithmic pathfinding to autonomously play word hunt.</p>
   <div class="demo">
-    <img src="demos/wordHunt.gif" alt="WordHunt Bot demo">
+    <img src="demos/wordHunt.gif" alt="WordHunt Bot Demo" class="demo-gif" />
+    <div class="caption">The bot in action from screen capture to solving.</div>
+
+    <div class="results-images">
+      <img src="demos/win1.png" alt="Results Screenshot 1" />
+      <img src="demos/win2.png" alt="Results Screenshot 2" />
+    </div>
+    <div class="caption">Final Game Results vs friends</div>
   </div>
   <p>Technologies Used: OpenCV, Python, C++, PyTorch, mss, pynput</p>
 </div>
 
 <div class="project">
-    <div class="project-header">
-        <strong>League Betting Platform</strong> - <a href="https://colab.research.google.com/drive/1G9cGO3sN0ptijLfVvGaSxAMuTb3xpXHv?usp=sharing">[Colab for KDA model]</a>
-    </div>
+  <div class="project-header">
+    <strong>League Betting Platform</strong> - <a href="https://colab.research.google.com/drive/1G9cGO3sN0ptijLfVvGaSxAMuTb3xpXHv?usp=sharing">[Colab for KDA model]</a>
+  </div>
   <p>AI Driven League of Legends Sportsbook Platform & Prediction Engine.</p>
-  <p> will add pic + site later</p>
+  <p>will add pic + site later</p>
   <p>Technologies Used: React, TypeScript, FastAPI, PostgreSQL, XGBoost, Optuna, Riot API</p>
 </div>
 
